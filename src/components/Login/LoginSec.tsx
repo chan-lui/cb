@@ -63,7 +63,7 @@ const LoginPage: React.FC = () => {
                 }, 2500);
                 return;
             };
-            const response = await axios.post('https://crest-bank.vercel.app/api/login', { email, password });
+            const response = await axios.post('/api/login', { email, password });
             if (response?.data?.error) {
                 setError(response?.data?.error)
                 setLoading(false)
