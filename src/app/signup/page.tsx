@@ -79,7 +79,7 @@ const SignUp: React.FC = () => {
         const file = inputFileRef.current.files[0];
 
         const response = await fetch(
-            `https://crest-bank.vercel.app/api/upload-image?filename=${file.name}`,
+            `https://crestbank.vercel.app/api/upload-image?filename=${file.name}`,
             {
                 method: 'POST',
                 body: file,
@@ -148,7 +148,7 @@ const SignUp: React.FC = () => {
 
             const { confirmPassword, ...newData } = data
 
-            const response = await axios.post('https://crest-bank.vercel.app/api/signup', newData);
+            const response = await axios.post('https://crestbank.vercel.app/api/signup', newData);
 
             if (response.data.success) {
                 reset()
